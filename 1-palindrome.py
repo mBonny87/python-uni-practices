@@ -13,11 +13,12 @@ def palindrome(n):
 
   dec = 1
 
-  for i in range(len(list) - 1, -1, -1):
+  for i in list[::-1]:
     print(i)
-    m += (list[i] * dec)
+    m += (i * dec)
     dec *= 10
 
   return n == m
 
-print(palindrome(13531))
+print(palindrome(13531)) # True
+print(palindrome(13521)) # False
